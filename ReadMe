@@ -1,0 +1,43 @@
+Here we have done some recognition of Devanagari digits or you can say Marathi digits by using COnvolutional Neural Network.
+we are using 4 csv files present in the data folder,x_train,y_train.x_test,y_test respectively. All these files contains pixel values of the images we are going to use in this project. 
+Now basically its a concept of Deep Learning,
+then what is Deep Learning? Big question.....
+
+so basically Deep Learning is the structure of Neural Network which goes deep and deep for getting what it wants.
+In other words, Deep Learning is that kind of structure which contains multiple layer throuh which data will pass after processing.
+This structure of layers is derived from our brain structure. There is one thing in our brain which is called as Neuron who takes data,process data and then forwards data.
+
+Scientist studied that and try to make a neural network for machines and let them work of their own.
+Thats how ANN i.e. Artificial Neural Network was born. 
+
+In our project we are using CNN i.e. Convolutional Neural Network, which is other version or modified version of Feed Forward Network.
+Convolutional Neural Network is maded up of three Layers(actually there are four but main are only these three) which are
+1.Convolutional Layer
+2.Pooling Layer
+3.Fully Connected layer
+
+these are the layers of our CNN model , and our whole model have total 3 layers, Input layer,Hidden Layer and Output layer. 
+You can consider CNN in the hidden layer part. Because thats where actual work gets done.
+
+Input layer takes the images and transfers it to first layer of CNN i.e Convolutional Layer where whole image's pixel values get multiplied with 
+our kernal filter values which is also called as Feature Map. these pixel values in Filter are those values which model extracted from images
+we provided during training phase.
+In simple words this contains the important info of image like angles,curves,circle etc. after that it produces a new table of values obtained from multiplication
+Filters can be of different sizes like 3x3,4x4,5x5 depends on you. So consider you have image of 5x5 pixel and 
+if you take 3x3 filter then it will first get multiplied with 3x3 matrix in that image then it slide to next 3x3 matrix in images,
+after doing all this it will produce a 3x3 matrix which will contain average of the operation done of image.
+
+in simple words your image will get divided in number of images, means you are breaking on image into many which have more focused info
+Then this info passes to the next layer that is Pooling layer, but before that after convolutiona layer we use activation function like Relu 
+to soften the image. There are multiple activation functions present in Machine Learning but most users uses Relu i.e. Rectified Linear Unit.
+So what does this relu do? interesting question huh..
+In relu everything which is less than 0 lets say -1 is 0. means in the matrix formed after convolutional layer , if there is any -ve value then 
+relu translates it to 0 and if you have +ve values then itwill remain as it is.
+
+then this adjusted matrix is sent to Pooling layer, 
+now Pooling layer have different types of pools like MaxPool,avgPool,etc
+in MaxPooling maximum values is get selected from entire 3x3 matrix...for ex, after 1st layer you have lets say 9 matrix, each with defferent values, 
+so in maxpooling a matrix will get formed with max value in each matrix.
+and in avgpooling average of matrix will get stored in.
+and that matrix will get transfered to FullyConnected layer which all features gets combined to produce final reult that is classifying the object,in our case digits.
+The final result get transfered to Output layer which shows us the result of our model means it identifies the digit currectly or not.
